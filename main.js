@@ -23,10 +23,26 @@ caixa2.addEventListener("click", () => {
 });
 // Mesma coisa do exemplo anterior, porém, utilizando função anônima
 
+// mais.addEventListener("click", () => {
+//   container.value = parseInt(container.value) + 1;
+// });
+
+// menos.addEventListener("click", () => {
+//   container.value = parseInt(container.value) - 1;
+// });
+
 mais.addEventListener("click", () => {
-  container.value = parseInt(container.value) + 1;
+  manipulaDados("somar");
 });
 
 menos.addEventListener("click", () => {
-  container.value = parseInt(container.value) - 1;
+  manipulaDados("subtrair");
 });
+
+var manipulaDados = (operacao) => {
+  if (operacao === "subtrair") {
+    container.value = parseInt(container.value) - 1;
+  } else {
+    container.value = parseInt(container.value) + 1;
+  }
+};
