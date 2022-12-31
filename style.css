@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+  background-color: rgb(64, 79, 81);
+  text-align: center;
+  height: 50vh;
+}
+
+.botao__menos {
+  margin-right: 5em;
+  padding: 2em 2em;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+.botao__mais {
+  margin-left: 5em;
+  padding: 2em 2em;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+.container__valor {
+  text-align: center;
+  padding: 2em;
+}
