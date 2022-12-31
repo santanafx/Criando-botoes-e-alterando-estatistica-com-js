@@ -20,6 +20,17 @@
   height: 20vh;
 }
 
+.container3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+  background-color: rgb(121, 183, 192);
+  text-align: center;
+  height: 20vh;
+}
+
 .botao__menos {
   margin-right: 5em;
   padding: 2em 2em;
@@ -55,4 +66,9 @@
 .container__valor {
   text-align: center;
   padding: 2em;
+}
+
+.caixa {
+  background: red;
+  padding: 2em 5em;
 }
