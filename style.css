@@ -6,7 +6,18 @@
   width: 80%;
   background-color: rgb(64, 79, 81);
   text-align: center;
-  height: 50vh;
+  height: 20vh;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+  background-color: rgb(151, 185, 190);
+  text-align: center;
+  height: 20vh;
 }
 
 .botao__menos {
@@ -16,11 +27,29 @@
   border: 3px solid black;
 }
 
+.botao__menos:hover {
+  transition: 0.3s;
+  border: 3px solid red;
+}
+
+.botao__menos:active {
+  background: red;
+}
+
 .botao__mais {
   margin-left: 5em;
   padding: 2em 2em;
   border-radius: 50%;
   border: 3px solid black;
+}
+
+.botao__mais:hover {
+  transition: 0.3s;
+  border: 3px solid green;
+}
+
+.botao__mais:active {
+  background: green;
 }
 
 .container__valor {
