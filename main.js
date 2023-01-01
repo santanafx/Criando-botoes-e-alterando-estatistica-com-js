@@ -8,7 +8,7 @@ var menos = document.querySelector(".botao__menos");
 var container = document.querySelector(".container__valor");
 var mais = document.querySelector(".botao__mais");
 
-var controle = document.querySelectorAll(".controle__ajuste");
+var controle = document.querySelectorAll("[data-controle]");
 
 //LÓGICA PARA CLICAR NA CAIXA E DIZER OI-----------------------------------------
 //função normal
@@ -56,20 +56,32 @@ caixa2.addEventListener("click", () => {
 // };
 
 //LÓGICA PARA FUNCIONAR TODOS OS BOTÕES DINÂMICAMENTE---------------------------------------------------
+
 controle.forEach((elemento) => {
   //elemento é uma variável qualquer que irá receber o valor do array de acordo com a posicao que ele se encontra
   elemento.addEventListener("click", (evento) => {
     //evento faz a mesma coisa que o elemento mas no caso ele é uma variável de uma variável
-    manipulaDados(evento.target.textContent, evento.target.parentNode);
+    manipulaDados(evento.target.dataset.controle, evento.target.parentNode);
+    atualizaSoma(evento.target.dataset.controle);
   });
 });
 
 var manipulaDados = (operacao, container) => {
-  var contador = container.querySelector(".container__valor");
+  var contador = container.querySelector("[data-contador]");
 
   if (operacao === "-") {
     contador.value = parseInt(contador.value) - 1;
   } else {
     contador.value = parseInt(contador.value) + 1;
+  }
+};
+
+var somaTodos = document.querySelector("[data-soma]");
+
+var atualizaSoma = (alvo) => {
+  if (alvo === "-") {
+    somaTodos.value = parseInt(somaTodos.value) - 1;
+  } else {
+    somaTodos.value = parseInt(somaTodos.value) + 1;
   }
 };
